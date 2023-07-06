@@ -2,7 +2,8 @@ package controllers
 
 import (
 	"html/template"
-	"log"
+
+	log "github.com/parikshitg/beego/logs"
 
 	beego "github.com/beego/beego/v2/server/web"
 )
@@ -32,10 +33,10 @@ func (c *ContactController) Post() {
 	subject := c.GetString("subject")
 	message := c.GetString("message")
 
-	log.Println("name:", name)
-	log.Println("email:", email)
-	log.Println("subject:", subject)
-	log.Println("message:", message)
+	log.L.Info("name: %s", name)
+	log.L.Info("email: %s", email)
+	log.L.Info("subject: %s", subject)
+	log.L.Info("message: %s", message)
 
 	if name == "" || email == "" || subject == "" || message == "" {
 		c.Data["error"] = "Fields can not be empty!"

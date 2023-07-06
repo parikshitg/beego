@@ -32,7 +32,7 @@ func init() {
 	ormer = orm.NewOrm()
 
 	// load blogs from data.json and insert all blogs
-	loadData()
+	// loadData()
 }
 
 func loadData() []Blog {
