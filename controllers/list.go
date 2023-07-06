@@ -14,5 +14,5 @@ func (c *ListController) Get() {
 	c.TplName = "pages/bloglist.tpl"
 	c.Data["blogs"] = models.ReadAll()
 	c.Data["title"] = "Blog List"
-	c.Data["page"] = "Blog"
+	c.Data["uri"] = "Blog"
 }

@@ -6,7 +6,7 @@
 				<div class="col-xs-12 col-md-8 col-md-offset-2">
 		  			<ul class="banner-breadcrumb color-white clearfix">
 		  				<li><a class="link-blue-2" href="#">home</a> /</li>
-		  				<li><span>{{.page}}</span></li>
+		  				<li><span>{{.uri}}</span></li>
 		  			</ul>
 		  			<h2 class="color-white">{{.title}}</h2>
   				</div>

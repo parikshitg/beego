@@ -9,7 +9,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12 col-sm-8">
-				{{with .error}}<p>{{.}}</p>{{end}}
+				{{with .error}}<p style="color:#E52F08;">{{.}}</p>{{end}}
 				{{with .success}}<p>{{.}}</p>{{end}}
 				<form class="contact-form" action="/contact" method="POST">
 					{{.xsrfdata}}

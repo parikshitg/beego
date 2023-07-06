@@ -6,12 +6,8 @@
         "date": "Nov 12, 2019",
         "author": "Mahendra Choudhary",
         "image": "/img/data/1.jpeg",
-        "categories": [
-            "Web Development"
-        ],
-        "tags": [
-            "Web Development"
-        ]
+        "category": "Web Development",
+        "tag": "Web Development"
     },
     {
         "slug": "what-is-web-development",
@@ -20,14 +16,8 @@
         "date": "Nov 23, 2019",
         "author": "Mahendra Choudhary",
         "image": "/img/data/2.jpeg",
-        "categories": [
-            "Web Development"
-        ],
-        "tags": [
-            "Web Development",
-            "Software",
-            "Database"
-        ]
+        "category": "Web Development",
+        "tag": "Web Development"
     },
     {
         "slug": "dns-records-simplified",
@@ -36,13 +26,8 @@
         "date": "Oct 30, 2020",
         "author": "Naeem Hadiq",
         "image": "/img/data/3.jpeg",
-        "categories": [
-            "Web Development"
-        ],
-        "tags": [
-            "DNS",
-            "Name Server"
-        ]
+        "category": "Web Development",
+        "tag": "DNS"
     },
     {
         "slug": "what-is-flutter",
@@ -51,14 +36,8 @@
         "date": "August 26, 2019",
         "author": "Concise Software",
         "image": "/img/data/4.jpeg",
-        "categories": [
-            "Mobile App",
-            "Flutter"
-        ],
-        "tags": [
-            "Flutter",
-            "MobileApp"
-        ]
+        "category": "Mobile App",
+        "tag": "Flutter"
     },
     {
         "slug": "flutter-the-future-of-mobile-app-development",
@@ -67,15 +46,8 @@
         "date": "May 20, 2019",
         "author": "Eric Grandt ",
         "image": "/img/data/5.jpeg",
-        "categories": [
-            "Flutter",
-            "Mobile App"
-        ],
-        "tags": [
-            "Flutter",
-            "Android",
-            "iOS"
-        ]
+        "category": "Flutter",
+        "tag": "Flutter"
     },
     {
         "slug": "a-simplified-introduction-to-dart",
@@ -84,15 +56,8 @@
         "date": "April 1, 2023",
         "author": "Jon Doe",
         "image": "/img/data/6.jpeg",
-        "categories": [
-            "Flutter",
-            "Dart"
-        ],
-        "tags": [
-            "Dart",
-            "Mobile",
-            "Flutter"
-        ]
+        "category": "Flutter",
+        "tag": "Dart"
     },
     {
         "slug": "different-types-of-web-hosting-explained",
@@ -101,12 +66,8 @@
         "date": "Nov 8, 2018",
         "author": "Alex Sanchez-Olvera",
         "image": "/img/data/7.jpeg",
-        "categories": [
-            "Hosting"
-        ],
-        "tags": [
-            "Hosting"
-        ]
+        "category": "Hosting",
+        "tag": "Hosting"
     },
     {
         "slug": "what-is-web-hosting-and-how-it-works",
@@ -115,12 +76,8 @@
         "date": "Jan 2, 2018 ",
         "author": "Visual Modo",
         "image": "/img/data/9.jpeg",
-        "categories": [
-            "Hosting"
-        ],
-        "tags": [
-            "Hosting"
-        ]
+        "category": "Hosting",
+        "tag": "Hosting"
     },
     {
         "slug": "sikkim’s-journey-on-becoming-the-first-100-organic-farming-state",
@@ -129,13 +86,8 @@
         "date": "Dec 6, 2017",
         "author": "Shyam Sundar Reddy ",
         "image": "/img/data/9.jpeg",
-        "categories": [
-            "Organic"
-        ],
-        "tags": [
-            "Travel",
-            "Agriculture"
-        ]
+        "category": "Organic",
+        "tag": "Travel"
     },
     {
         "slug": "cook-your-own-meals",
@@ -144,13 +96,8 @@
         "date": "Nov 15, 2017",
         "author": "Matt Longmire",
         "image": "/img/data/10.jpeg",
-        "categories": [
-            "cooking"
-        ],
-        "tags": [
-            "food",
-            "cooking"
-        ]
+        "category": "cooking",
+        "tag": "food"
     },
     {
         "slug": "my-love-for-cooking-—-5-reasons-why",
@@ -159,13 +106,8 @@
         "date": "Aug 17, 2017",
         "author": "Vijini Mallawaarachchi",
         "image": "/img/data/11.jpeg",
-        "categories": [
-            "cooking"
-        ],
-        "tags": [
-            "food",
-            "cooking"
-        ]
+        "category": "cooking",
+        "tag": "food"
     },
     {
         "slug": "top-travel-essentials",
@@ -174,11 +116,7 @@
         "date": "May 10, 2017 ",
         "author": "Hiral Kapadia",
         "image": "/img/data/12.jpeg",
-        "categories": [
-            "Travel"
-        ],
-        "tags": [
-            "Travel"
-        ]
+        "category": "Travel",
+        "tag": "Travel"
     }
 ]

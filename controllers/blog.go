@@ -19,8 +19,9 @@ func (c *BlogController) Get() {
 	if blog == nil {
 		c.Data["error"] = "Blog not found!"
 	} else {
+		// c.Data["title"] = blog.Title
 		c.Data["blog"] = blog
 	}
-	// c.Data["categories"] = models.Categories
-	// c.Data["tags"] = models.Tags
+	c.Data["categories"] = models.Categories
+	c.Data["tags"] = models.Tags
 }

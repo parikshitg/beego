@@ -13,7 +13,7 @@ type ContactController struct {
 
 func (c *ContactController) Get() {
 	c.TplName = "pages/contact.tpl"
-	c.Data["page"] = "Contact"
+	c.Data["uri"] = "Contact"
 	c.Data["title"] = "Get in touch"
 	c.Data["xsrfdata"] = template.HTML(c.XSRFFormHTML())
 }

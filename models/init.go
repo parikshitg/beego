@@ -13,6 +13,8 @@ import (
 )
 
 var ormer orm.Ormer
+var Categories = make(map[string]int)
+var Tags = make(map[string]int)
 
 func init() {
 	// orm.Debug = true
@@ -30,11 +32,7 @@ func init() {
 	ormer = orm.NewOrm()
 
 	// load blogs from data.json and insert all blogs
-	blogs := loadData()
-	err := InsertMulti(blogs)
-	if err != nil {
-		log.Fatal("err:", err)
-	}
+	loadData()
 }
 
 func loadData() []Blog {
@@ -50,6 +48,16 @@ func loadData() []Blog {
 	blogs := []Blog{}
 	if err := json.Unmarshal(bytes, &blogs); err != nil {
 		log.Fatal(err)
+	}
+
+	err = InsertMulti(blogs)
+	if err != nil {
+		log.Fatal("err:", err)
+	}
+
+	for _, b := range blogs {
+		Categories[b.Category]++
+		Tags[b.Tag]++
 	}
 
 	return blogs

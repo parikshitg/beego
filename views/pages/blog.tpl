@@ -6,6 +6,7 @@
 <div class="detail-wrapper">
 	<div class="container">
        	<div class="row padd-90">
+       		{{ with .error }}<h3 style="color:#E52F08;">{{.}}</h3><br><br>{{ end }}
        		{{with .blog}}
        		<div class="col-xs-12 col-md-8">
        			<div class="detail-header style-2">
@@ -37,9 +38,9 @@
 						<div class="tags clearfix">
 							<div class="tags-title color-dark-2">tag:</div>
 							<ul class="clearfix">
-								{{ range $t := .Tag }}
-	 							<li><a class="c-button b-30 b-1 bg-grey-2 hv-dr-blue-2" href="#">{{.}}</a></li>						
-								{{ end }}
+							
+	 							<li><a class="c-button b-30 b-1 bg-grey-2 hv-dr-blue-2" href="#">{{.Tag}}</a></li>						
+								
 	 						</ul>						
 						</div> 
 						<div class="share clearfix">
@@ -55,6 +56,8 @@
 				</div>			       			
        		</div>
        		{{ end }}
+       		
+       		{{ if .blog }}
        		<div class="col-xs-12 col-md-4">
        			<div class="right-sidebar">
        				<div class="sidebar-block type-2">
@@ -69,16 +72,18 @@
        				</div>
 					<div class="sidebar-block type-2">
 						<h4 class="sidebar-title color-dark-2">categories</h4>
+						{{ with .categories }}
 						<ul class="sidebar-category color-5">
 							<li>
 								<a href="#">all <span class="fr">(14)</span></a>				
 							</li>
-							{{ range $k, $v:= .categories }}
+							{{ range $k, $v:= . }}
 							<li>
 								<a href="#">{{$k}}<span class="fr">{{$v}}</span></a>	
 							</li>							
 							{{ end }}	
 						</ul>
+						{{ end }}
 					</div> 
 					<div class="sidebar-block type-2">
 						<h4 class="sidebar-title color-dark-2">popular posts</h4>
@@ -86,9 +91,9 @@
 							{{$blog1 := getBlog "cook-your-own-meals"}}
 							{{if $blog1}}
 							<div class="hotel-small style-2 clearfix">
-								<a class="hotel-img black-hover" href="#">
+								<a class="hotel-img black-hover" href="/blog/{{$blog1.Slug}}">
 									<img class="img-responsive radius-0" src="{{$blog1.Image}}" alt="">
-									<div class="tour-layer delay-1"></div>        						
+									<div class="tour-layer delay-1"></div>		
 								</a>
 								<div class="hotel-desc">
 									<div class="tour-info-line">
@@ -101,7 +106,7 @@
 								  	 		<span class="font-style-2 color-dark-2">{{$blog1.Author}}</span>
 								  	 	</div>					
 									</div>
-			    					<h4>history of mauritius</h4>
+			    					<h4>{{$blog1.Title}}</h4>
 									<div class="tour-info-line clearfix">
 										<div class="tour-info">
 								  	 		<img src="/img/comment_icon_grey.png" alt="">
@@ -114,7 +119,7 @@
 							{{$blog2 := getBlog "dns-records-simplified"}}
 							{{if $blog2}}
 							<div class="hotel-small style-2 clearfix">
-								<a class="hotel-img black-hover" href="#">
+								<a class="hotel-img black-hover" href="/blog/{{$blog2.Slug}}">
 									<img class="img-responsive radius-0" src="{{$blog2.Image}}" alt="">
 									<div class="tour-layer delay-1"></div>        						
 								</a>
@@ -129,7 +134,7 @@
 								  	 		<span class="font-style-2 color-dark-2">{{$blog2.Author}}</span>
 								  	 	</div>					
 									</div>
-			    					<h4>mauritius from 5 days</h4>
+			    					<h4>{{$blog2.Title}}</h4>
 									<div class="tour-info-line clearfix">
 										<div class="tour-info">
 								  	 		<img src="/img/comment_icon_grey.png" alt="">
@@ -142,9 +147,9 @@
 							{{$blog3 := getBlog "top-travel-essentials"}}
 							{{if $blog3}}
 							<div class="hotel-small style-2 clearfix">
-								<a class="hotel-img black-hover" href="#">
+								<a class="hotel-img black-hover" href="/blog/{{$blog3.Slug}}">
 									<img class="img-responsive radius-0" src="{{$blog3.Image}}" alt="">
-									<div class="tour-layer delay-1"></div>        						
+									<div class="tour-layer delay-1"></div>		
 								</a>
 								<div class="hotel-desc">
 									<div class="tour-info-line">
@@ -157,7 +162,7 @@
 								  	 		<span class="font-style-2 color-dark-2">{{$blog3.Author}}</span>
 								  	 	</div>					
 									</div>
-			    					<h4>mauritius from 5 days</h4>
+			    					<h4>{{$blog3.Title}}</h4>
 									<div class="tour-info-line clearfix">
 										<div class="tour-info">
 								  	 		<img src="/img/comment_icon_grey.png" alt="">
@@ -179,6 +184,7 @@
 					</div>							      				
        			</div>       			
        		</div>
+       		{{ end }}
        	</div>
 	</div>
 </div>
